@@ -141,6 +141,7 @@ function newset(){
 
 
   while(previousIndex[0]===newIndex[2]||previousIndex[1]===newIndex[2]||previousIndex[2]===newIndex[2]){
+  
     newIndex[2]=getRandomIndex();
     newIndex.push(newIndex[2]);
 
