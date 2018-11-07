@@ -116,17 +116,17 @@ function newset(){
 
     newIndex=getUniqueImages();
   }
-  img1.name=products[pictureshowIndex[0]].name;
-  img1.src=products[pictureshowIndex[0]].src;
-  products[pictureshowIndex[0]].shown++;
+  img1.name=products[newIndex[0]].name;
+  img1.src=products[newIndex[0]].src;
+  products[newIndex[0]].shown++;
 
-  img2.name=products[pictureshowIndex[1]].name;
-  img2.src=products[pictureshowIndex[1]].src;
-  products[pictureshowIndex[1]].shown++;
+  img2.name=products[newIndex[1]].name;
+  img2.src=products[newIndex[1]].src;
+  products[newIndex[1]].shown++;
 
-  img3.name=products[pictureshowIndex[2]].name;
-  img3.src=products[pictureshowIndex[2]].src;
-  products[pictureshowIndex[2]].shown++;
+  img3.name=products[newIndex[2]].name;
+  img3.src=products[newIndex[2]].src;
+  products[newIndex[2]].shown++;
 
 }
 
@@ -164,7 +164,7 @@ function reset(event){
 
  }
 
-}
+} 
 
 function createChart(){
 
