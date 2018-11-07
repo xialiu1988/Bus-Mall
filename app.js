@@ -100,7 +100,7 @@ function render(){
 
  
   }
-
+  
 }
 
 
@@ -109,51 +109,29 @@ function newset(){
 
 
   var previousIndex=pictureshowIndex;
-  var newIndex=[];
-  
-  for(var i=0;i<3;i++){
-
-   var newid=getRandomIndex();
-   newIndex.push(newid);
-
-  }
-
+  var newIndex=getUniqueImages();
 
   while(previousIndex[0]===newIndex[0]||previousIndex[1]===newIndex[0]||previousIndex[2]===newIndex[0]){
 
-    newIndex[0]=getRandomIndex();
-    newIndex.push(newIndex[0]);
+    newIndex=getUniqueImages();
+    
   }
-  img1.name=products[newIndex[0]].name;
-  img1.src=products[newIndex[0]].src;
-  products[newIndex[0]].shown++;
+  img1.name=products[pictureshowIndex[0]].name;
+  img1.src=products[pictureshowIndex[0]].src;
+  products[pictureshowIndex[0]].shown++;
 
-  while(previousIndex[0]===newIndex[1]||previousIndex[1]===newIndex[1]||previousIndex[2]===newIndex[1]){
   
-    newIndex[1]=getRandomIndex();
-    newIndex.push(newIndex[1]);
-
-  }
-  img2.name=products[newIndex[1]].name;
-  img2.src=products[newIndex[1]].src;
-  products[newIndex[1]].shown++;
+  img2.name=products[pictureshowIndex[1]].name;
+  img2.src=products[pictureshowIndex[1]].src;
+  products[pictureshowIndex[1]].shown++;
 
 
+  img3.name=products[pictureshowIndex[2]].name;
+  img3.src=products[pictureshowIndex[2]].src;
+  products[pictureshowIndex[2]].shown++;
 
-  while(previousIndex[0]===newIndex[2]||previousIndex[1]===newIndex[2]||previousIndex[2]===newIndex[2]){
-  
-    newIndex[2]=getRandomIndex();
-    newIndex.push(newIndex[2]);
-
-  }
-
-
-  img3.name=products[newIndex[2]].name;
-  img3.src=products[newIndex[2]].src;
-  products[newIndex[2]].shown++;
 
 }
-
 
 
 function clicknumber(event){
@@ -210,7 +188,7 @@ function createChart(){
       {
         label: 'Total votes',
         backgroundColor: [
-          '#FF6384',
+          '#FF6386',
           '#36A2EB',
           '#FFCE56',
           '#4BC0C0',
@@ -220,6 +198,10 @@ function createChart(){
           '#FFCE56',
           '#4BC0C0',
           '#9966FF',
+          '#4BC0C0',
+          '#9966FF',
+          '#FF6384',
+          '#36A2EB',
           '#FF6384',
           '#36A2EB',
           '#FFCE56',
@@ -232,9 +214,6 @@ function createChart(){
           '#9966FF'
         ],
         borderColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
           '#4BC0C0',
           '#9966C0',
           '#FF6384',
@@ -251,7 +230,10 @@ function createChart(){
           '#36A2EB',
           '#FFCE56',
           '#4BC0C0',
-          '#9966C0'
+          '#9966C0',
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56'
         ],
         borderWidth: 1,
         data: [],
@@ -340,3 +322,5 @@ img3.addEventListener('click', clicknumber);
 this.resetbutton.addEventListener('click',reset);
 
 render();
+
+  
