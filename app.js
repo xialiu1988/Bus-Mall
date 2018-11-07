@@ -109,20 +109,44 @@ function newset(){
 
 
   var previousIndex=pictureshowIndex;
+  var newIndex=[];
+  
+  for(var i=0;i<3;i++){
 
-  var newIndex=getUniqueImages();
+   var newid=getRandomIndex();
+   newIndex.push(newid);
 
-  while(previousIndex[0]===newIndex[0]||previousIndex[1]===newIndex[1]||previousIndex[2]===newIndex[2]){
+  }
 
-    newIndex=getUniqueImages();
+
+  while(previousIndex[0]===newIndex[0]||previousIndex[1]===newIndex[0]||previousIndex[2]===newIndex[0]){
+
+    newIndex[0]=getRandomIndex();
+    newIndex.push(newIndex[0]);
   }
   img1.name=products[newIndex[0]].name;
   img1.src=products[newIndex[0]].src;
   products[newIndex[0]].shown++;
 
+  while(previousIndex[0]===newIndex[1]||previousIndex[0]===newIndex[1]||previousIndex[0]===newIndex[1]){
+  
+    newIndex[1]=getRandomIndex();
+    newIndex.push(newIndex[1]);
+
+  }
   img2.name=products[newIndex[1]].name;
   img2.src=products[newIndex[1]].src;
   products[newIndex[1]].shown++;
+
+
+
+  while(previousIndex[0]===newIndex[2]||previousIndex[0]===newIndex[2]||previousIndex[0]===newIndex[2]){
+  
+    newIndex[2]=getRandomIndex();
+    newIndex.push(newIndex[2]);
+
+  }
+
 
   img3.name=products[newIndex[2]].name;
   img3.src=products[newIndex[2]].src;
@@ -168,7 +192,7 @@ function reset(event){
 
 function createChart(){
 
-  pictureBox.style.backgroundColor='grey';
+  pictureBox.style.backgroundColor='white';
   var title=document.createElement('h5');
   title.textContent='Bar Chart';
   pictureBox.appendChild(title);
