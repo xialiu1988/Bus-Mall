@@ -128,7 +128,7 @@ function newset(){
   img1.src=products[newIndex[0]].src;
   products[newIndex[0]].shown++;
 
-  while(previousIndex[0]===newIndex[1]||previousIndex[0]===newIndex[1]||previousIndex[0]===newIndex[1]){
+  while(previousIndex[0]===newIndex[1]||previousIndex[1]===newIndex[1]||previousIndex[2]===newIndex[1]){
   
     newIndex[1]=getRandomIndex();
     newIndex.push(newIndex[1]);
@@ -140,7 +140,7 @@ function newset(){
 
 
 
-  while(previousIndex[0]===newIndex[2]||previousIndex[0]===newIndex[2]||previousIndex[0]===newIndex[2]){
+  while(previousIndex[0]===newIndex[2]||previousIndex[1]===newIndex[2]||previousIndex[2]===newIndex[2]){
   
     newIndex[2]=getRandomIndex();
     newIndex.push(newIndex[2]);
