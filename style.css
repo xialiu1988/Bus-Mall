@@ -1,26 +1,42 @@
 
 
 body{
-    background-color: aquamarine;
+    background-color: burlywood;
 
 }
 
 h1{
-
- text-align:center;
- color:plum; 
+   
+   text-align:center;
+   color:rebeccapurple;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .left{
-    margin-left:auto;
-    display: inline;
+    padding:10px;
+    margin-left:200px;
+    display: inline-block;
+    border:15px solid palevioletred;
 }
 .center{
+    padding:10px;
     margin-left:auto;
     display: inline;
+    border:15px solid palevioletred;
 }
 .right{
-
+    padding:10px;
+    border:15px solid palevioletred;
     margin-right:auto;
     display: inline;
+}
+#resetbutton{
+    display: block;
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:14px;
+    margin-top:80px;
+    margin-left:600px;
+
+
 }
