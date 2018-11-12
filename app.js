@@ -64,8 +64,8 @@ function createinstances(){
 
 function storeclicks(){
 
- var productsdata=JSON.stringify(products);
- localStorage.setItem('storedata',productsdata);
+  var productsdata=JSON.stringify(products);
+  localStorage.setItem('storedata',productsdata);
 
 
 }
@@ -169,8 +169,8 @@ function clicknumber(event){
     if(event.target.name===products[i].name)
       products[i].clicked++;
     // products[i].percentage=Math.round(products[i].clicked/products[i].shown*100);
-
-  }
+ }
+  
   if(totalClicks<25){
     newset();
   }
@@ -180,9 +180,7 @@ function clicknumber(event){
     storeclicks();
   }
 
-
 }
-
 
 function reset(event){
 
@@ -190,7 +188,7 @@ function reset(event){
   if(event.target.id==='resetbutton'){
 
     window.location.reload();
-
+    localStorage.clear();
 
   }
 
